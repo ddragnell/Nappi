@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Food } from 'src/app/shared/models/food';
 import { Tag } from 'src/app/shared/models/tag';
-import { sample_foods } from 'src/data';
+import { sample_foods, sample_tags } from 'src/data';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class FoodService {
   constructor() { }
 
   getFoodById(id: number): Food{
-    return this.getAll().find(food => food.id == id)!;
+    return this.getAll().find(food => food.id == food.id) ?? new Food();
   }
 
   getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
@@ -29,12 +29,7 @@ export class FoodService {
   }
 
   getAllTags():Tag[]{
-    return[
-      { name: 'Todo', count: 14},
-      { name: 'Comida rápida', count: 5},
-      { name: 'Medicamentos', count: 2},
-      { name: 'Productos de aseo', count: 3},
-    ]
+    return sample_tags;
   }
 
   getAll():Food[]{
