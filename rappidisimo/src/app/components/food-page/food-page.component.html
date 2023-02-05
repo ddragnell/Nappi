@@ -1,5 +1,5 @@
-<app-not-found [visible]="!food.id" notFoundMessage="Este producto no se encuentra disponible"></app-not-found>
-<div *ngIf="food.id" class="container">
+<app-not-found [visible]="!food" notFoundMessage="Este producto no se encuentra disponible"></app-not-found>
+<div *ngIf="food" class="container">
   <img [src]="food.imageUrl" [alt]="food.name" />
 
   <div class="details">

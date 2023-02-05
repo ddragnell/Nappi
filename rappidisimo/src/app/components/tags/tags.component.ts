@@ -10,18 +10,15 @@ import { FoodService } from 'src/app/services/food/food.service';
 
 export class TagsComponent implements OnInit{
 
-  @Input()
-  foodPageTags?:string[];
-
-  @Input()
-  justifyContent:string = 'center';
-
   tags?:Tag[];
-  constructor(private foodService:FoodService){ }
+  constructor(private foodService:FoodService){
+    foodService.getAllTags().subscribe(serverTags => {
+      this.tags = serverTags;
+    });
+  }
 
 
   ngOnInit(): void {
-    if(!this.foodPageTags)
-      this.tags = this.foodService.getAllTags();
+
   }
 }
