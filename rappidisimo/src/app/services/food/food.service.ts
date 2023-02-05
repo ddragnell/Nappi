@@ -13,8 +13,8 @@ export class FoodService {
 
   constructor() { }
 
-  getFoodById(id: number): Food{
-    return this.getAll().find(food => food.id == food.id) ?? new Food();
+  getFoodById(foodId: string): Food{
+    return this.getAll().find(food => food.id == foodId) ?? new Food();
   }
 
   getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
