@@ -1,0 +1,34 @@
+header{
+  background: #8215a3;
+  padding: 0;
+  border-bottom: 1px solid #ffffff ;
+}
+
+a{
+  color:rgb(255, 255, 255)
+}
+
+a:hover{
+  background: #755968;
+}
+
+.container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+/* a es el ñam ñam, ul es el cart */
+a.logo{
+  font-weight: bold;
+  padding: 1em;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li a{
+  padding: 1em;
+  display: inline-block;
+}

@@ -1,0 +1,25 @@
+<app-not-found [visible]="!food" notFoundMessage="Este producto no se encuentra disponible"></app-not-found>
+<div *ngIf="food" class="container">
+  <img [src]="food.imageUrl" [alt]="food.name" />
+
+  <div class="details">
+
+    <div class="header">
+      <span class="name">
+        {{food.name}}
+      </span>
+    </div>
+
+    <div class="tags">
+        <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
+    </div>
+
+    <div class="price">
+        <span>{{food.price|currency}}</span>
+    </div>
+
+    <button (click)="addToCart()">Añadir al carrito</button>
+
+  </div>
+</div>
+
