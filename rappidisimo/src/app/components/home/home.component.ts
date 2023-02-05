@@ -8,10 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  implements OnInit{
+export class HomeComponent implements OnInit{
 
   foods:Food[] =[];
-  constructor(private foodService:FoodService, private route:ActivatedRoute) { }
+  constructor(private foodService:FoodService, private route:ActivatedRoute) {
+    this.foods = foodService.getAll();
+   }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {

@@ -7,7 +7,7 @@ ul{
   padding: 0;
 }
 
-ul li a{
+li a{
   height: 18.5rem;
   width: 18rem;
   border: 1px solid whitesmoke;
@@ -24,13 +24,18 @@ li a:hover{
   cursor: pointer;
 }
 
+li a img{
+  object-fit: cover;
+  height: 14.5rem;
+}
 
 .content{
-  padding: .6rem 1rem;
+  margin-top: 0.3rem;
+  padding: 0.5rem 1rem;
   position: relative;
-  color: rgb(186, 6, 66);
+  height: 7rem;
+  color: rgb(11, 70, 22);
   font-size: 1rem;
-  object-fit: cover;
 }
 
 .product-item-footer{
@@ -40,11 +45,11 @@ li a:hover{
 }
 
 .price{
+  position: absolute;
+  bottom: 0;
+  left: 0.9rem;
   color:rgb(11, 70, 122);
-  margin-top: .7rem;
-}
-
-.image{
-  width: 15rem;
-  height: 15rem;
+  padding: 0.3rem 0 0.66rem;
+  margin-top: 0.7rem;
+  font-size: 1.3rem ;
 }
