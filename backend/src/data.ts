@@ -5,7 +5,8 @@ export const sample_foods: any[] = [
     price:10000,
     tags: ['Comida-rapida'],
 
-    imageUrl: '/assets/images/imagenes/ñamñam1.jpg'
+    imageUrl: '/assets/images/imagenes/ñamñam1.jpg',
+    address: 'dfghjk'
   },
   {
     id:'2',
@@ -13,7 +14,8 @@ export const sample_foods: any[] = [
     price:12000,
     tags: ['Comida-rapida'],
 
-    imageUrl: '/assets/images/imagenes/ñamñam2.jpeg'
+    imageUrl: '/assets/images/imagenes/ñamñam2.jpeg',
+    address: 'dfghjk'
   },
   {
     id:'3',
@@ -21,7 +23,8 @@ export const sample_foods: any[] = [
     price:18000,
     tags: ['Comida-rapida'],
 
-    imageUrl: '/assets/images/imagenes/ñamñam3.jpeg'
+    imageUrl: '/assets/images/imagenes/ñamñam3.jpeg',
+    address: 'dfghjk'
   },
   {
     id:'4',
@@ -29,7 +32,8 @@ export const sample_foods: any[] = [
     price:20000,
     tags: ['Comida-rapida'],
 
-    imageUrl: '/assets/images/imagenes/ñamñam4.png'
+    imageUrl: '/assets/images/imagenes/ñamñam4.png',
+    address: 'dfghjk'
   },
   {
     id:'5',
@@ -37,7 +41,8 @@ export const sample_foods: any[] = [
     price:8000,
     tags: ['Comida-rapida'],
 
-    imageUrl: '/assets/images/imagenes/ñamñam1.jpg'
+    imageUrl: '/assets/images/imagenes/ñamñam1.jpg',
+    address: 'dfghjk'
   },
 ]
 
