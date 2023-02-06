@@ -7,7 +7,7 @@
                   <!--<a href="#" routerLink="/cart-page">Carrito</a>-->
                 <a routerLink="/login">Iniciar sesión</a>
                 </li>
-              <li *ngIf="isAuth" class="menu-container">
+              <li *ngIf="!isAuth" class="menu-container">
                 <a routerLink="/dasshboard">{{user.name}}</a>
                 <div class="menu">
                   <a routerLink="/profile">Perfil</a>
