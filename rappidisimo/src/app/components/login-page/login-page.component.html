@@ -3,32 +3,20 @@
     <app-title title="Iniciar sesión"></app-title>
 
     <form [formGroup]="loginForm" (ngSubmit)="submit()">
-      <div class="input-container">
-        <label>Correo</label>
-        <div>
-          <input type="email" placeholder="Email" formControlName="email"/>
-        </div>
 
-        <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
-          <div *ngIf="fc.email.errors.required">El campo está vacío</div>
-          <div *ngIf="fc.email.errors.email">El correo es incorrecto</div>
-        </div>
+      <text-input [control]="fc.email"
+      [showErrorsWhen]="isSubmitted"
+      type="email"
+      label="Correo">
+      </text-input>
 
-      </div>
-      <div class="input-container">
-        <label>Contraseña</label>
-        <div>
-          <input type="password" placeholder="Password" formControlName="password"/>
-        </div>
+      <text-input [control]="fc.password"
+      [showErrorsWhen]="isSubmitted"
+      type="password"
+      label="Contraseña">
+      </text-input>
 
-        <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
-          <div *ngIf="fc.password.errors.errors">El campo está vacío</div>
-        </div>
-
-      </div>
-      <div class="button">
-        <button type="submit">Iniciar sesión</button>
-      </div>
+    <default-button text="Iniciar sesión"></default-button>
     </form>
   </div>
 </div>
