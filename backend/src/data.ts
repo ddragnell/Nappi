@@ -47,3 +47,20 @@ export const sample_tags:any[] = [
 { name: 'Medicamentos', count: 0},
 { name: 'Productos-de-aseo', count: 0},
 ]
+
+export const sample_users:any[] = [
+  {
+    name: "Andres",
+    email: "andressalbecerra@gmail.com",
+    password: "12345",
+    address: "Cali",
+    isAdmin: true,
+  },
+  {
+    name: "Manu",
+    email: "manuemlita@gmail.com",
+    password: "54321",
+    address: "Medellin",
+    isAdmin: false,
+  },
+]

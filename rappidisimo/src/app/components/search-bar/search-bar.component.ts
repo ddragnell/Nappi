@@ -16,7 +16,7 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void{
     this.route.params.subscribe(params => {
       if(params['searchTerm'])
-        this.searchTerm = params['searchTerm'];
+        this.searchTerm = params.searchTerm;
     })
   }
   search(term:string):void{

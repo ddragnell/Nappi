@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TagsComponent } from './components/tags/tags.component';
 import { FoodPageComponent } from './components/food-page/food-page.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TitleComponent } from './components/title/title.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule} from  '@angular/platform-browser/animations';
+import { InputContainerComponent } from './components/input-container/input-container.component'
 
 @NgModule({
   declarations: [
@@ -24,13 +28,22 @@ import { TitleComponent } from './components/title/title.component';
     FoodPageComponent,
     CartPageComponent,
     NotFoundComponent,
-    TitleComponent
+    TitleComponent,
+    LoginPageComponent,
+    InputContainerComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut:3000,
+      positionClass: 'toast-bottom-right',
+      newestOnTop:false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
