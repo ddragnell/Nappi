@@ -39,6 +39,10 @@ export class UserService {
     );
   }
 
+  public get currentUser():User{
+    return this.userSubject.value;
+  }
+
   register(userRegister:IUserRegister): Observable<User>{
     return this.http.post<User>(USER_REGISTER_URL, userRegister).pipe(
       tap({
@@ -59,7 +63,7 @@ export class UserService {
   logout(){
     this.userSubject.next(new User());
     localStorage.removeItem(USER_KEY);
-    window.location.reload();
+    window.location.href='/login';
   }
   private setUserToLocalStorage(user:User){
     localStorage.setItem(USER_KEY, JSON.stringify(user));

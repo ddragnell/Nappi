@@ -1,18 +1,16 @@
 <header>
   <div class="container">
-      <a href="#" routerLink="/" class="logo">Rappidisimo</a>
+      <a class="logo">ÑAPI</a>
       <nav>
           <ul>
               <li *ngIf="!isAuth">
-                  <!--<a href="#" routerLink="/cart-page">Carrito</a>-->
+
                 <a routerLink="/login">Iniciar sesión</a>
                 </li>
               <li *ngIf="!isAuth" class="menu-container">
                 <a routerLink="/dasshboard">{{user.name}}</a>
                 <div class="menu">
-                  <a routerLink="/profile">Perfil</a>
-                  <a routerLink="/orders">Ordenes</a>
-                  <a (click)="logout()">Cerrar sesión</a>
+                  <a routerLink="/login" (click)="logout()">Cerrar sesión</a>
                 </div>
               </li>
               <li>
