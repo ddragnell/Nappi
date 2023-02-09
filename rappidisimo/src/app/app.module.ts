@@ -21,6 +21,12 @@ import { InputValidationComponent } from './components/input-validation/input-va
 import { TextInputComponent } from './components/text-input/text-input.component';
 import { DefaultButtonComponent } from './components/default-button/default-button.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { OrderComponent } from './components/order/order.component';
+import { MapsComponent } from './components/maps/maps.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -39,6 +45,9 @@ import { RegisterPageComponent } from './components/register-page/register-page.
     TextInputComponent,
     DefaultButtonComponent,
     RegisterPageComponent,
+    OrderComponent,
+    MapsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -49,9 +58,9 @@ import { RegisterPageComponent } from './components/register-page/register-page.
     ReactiveFormsModule,
     ToastrModule.forRoot({
       timeOut:3000,
-      positionClass: 'toast-bottom-right',
       newestOnTop:false
-    })
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,5 @@
+import { LatLng } from "leaflet";
+
 export class User{
   id!:string;
   email!:string;
