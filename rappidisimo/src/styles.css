@@ -14,7 +14,7 @@ html{
 
 body{
     margin: 0;
-    font-family: "Quicksand", sand-serif;
+    font-family: "Quicksand", "sand-serif";
     font-size: 16;
 }
 

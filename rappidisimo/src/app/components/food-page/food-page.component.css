@@ -16,7 +16,6 @@
   flex: 1 0;
   object-fit: cover;
   height: 35rem;
-  width: 35rem;
   margin: 1rem;
  }
 
@@ -40,15 +39,30 @@
   font-weight: bold;
  }
 
- .details .price{
-  font-size: 1.8rem;
-  margin: 2rem 2rem;
+
+.details .tags{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details .tags a{
+  background-color: aliceblue;
+  padding: .3rem 1rem;
+  margin: 0.9rem 0 0.15rem 0;
+  border-radius: 10rem;
+  font-weight: 600;
   color: blue;
+}
+
+.details .price{
+  font-size: 1.8rem;
+  margin: 2rem 2rem 2rem 0;
+  color: green;
  }
 
 .details .price::before{
-  content: "Precio";
-  color: black;
+  content: "Precio: ";
+  color: darkgray;
 }
 
 .details button{
@@ -61,6 +75,6 @@
 }
 
 .details button:hover{
-  opacity: .9;
+  opacity: 0.9;
   cursor: pointer;
 }

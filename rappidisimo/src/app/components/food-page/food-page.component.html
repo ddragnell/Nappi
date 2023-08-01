@@ -11,7 +11,9 @@
     </div>
 
     <div class="tags">
-        <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
+        <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+          {{tag}}
+        </a>
     </div>
 
     <div class="price">

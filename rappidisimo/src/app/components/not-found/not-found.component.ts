@@ -7,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
- @Input() visible:boolean = false;
+ @Input() visible = false;
  @Input() notFoundMessage: string = "Este producto no se encuentra disponible";
  @Input() resetLinkText: string = "Regresar a la página principal";
- @Input() resetLinkRoute: string ="/";
+ @Input() resetLinkRoute: string ="/home";
 
   constructor() { }
 

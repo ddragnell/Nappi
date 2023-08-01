@@ -12,10 +12,12 @@ import { Food } from 'src/app/shared/models/food';
 export class FoodPageComponent implements OnInit {
 
   food!: Food;
-  constructor(private activatedRoute:ActivatedRoute, private foodService: FoodService, private cartService: CartService, private router:Router) {
+  constructor(activatedRoute:ActivatedRoute, foodService: FoodService, private cartService: CartService, private router:Router) {
     activatedRoute.params.subscribe((params) => {
       if(params['id'])
-      this.food = foodService.getFoodById(params['id'])
+        foodService.getFoodById(params['id']).subscribe(serverFood => {
+          this.food = serverFood;
+        });
     })
   }
 
